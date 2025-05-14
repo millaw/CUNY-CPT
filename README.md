@@ -9,6 +9,7 @@ cuny-letters-cpt/
 │   ├── class-taxonomy.php         # Handles taxonomy registration
 │   ├── class-permalinks.php       # Manages custom permalinks
 │   ├── class-breadcrumbs.php      # Handles breadcrumb functionality
+│   ├── cpt-register.php           # Handles additional CPT functionality
 │   └── class-admin.php            # Enhances admin interface
 └── uninstall.php                  # Cleanup on uninstall
 ```
