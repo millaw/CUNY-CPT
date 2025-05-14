@@ -27,7 +27,7 @@ class CUNY_Letters_Taxonomy {
 
         $args = array(
             'labels'                     => $labels,
-            'hierarchical'               => false,
+            'hierarchical'               => true,
             'public'                     => true,
             'show_ui'                    => true,
             'show_admin_column'          => true,
@@ -41,6 +41,12 @@ class CUNY_Letters_Taxonomy {
             ),
         );
 
-        register_taxonomy('office', array('letters'), $args);
+        // Attach Office taxonomy to all CPTs (letters + dynamic)
+        $cpts = get_option('cuny_dynamic_cpts', array());
+        $post_types = array('letters');
+        foreach ($cpts as $slug => $labels) {
+            $post_types[] = $slug;
+        }
+        register_taxonomy('office', $post_types, $args);
     }
 }
