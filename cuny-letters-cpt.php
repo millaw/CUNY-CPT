@@ -3,7 +3,7 @@
  * Plugin Name: CUNY Letters CPT
  * Plugin URI: https://github.com/millaw/cuny-letters-cpt
  * Description: Custom post type for managing letters organized by office
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Milla Wynn
  * Author URI: https://github.com/millaw
  * License: GPL-2.0+
