@@ -60,7 +60,7 @@ class CUNY_Letters_CPT {
                     echo '<div class="wrap"><h1>' . esc_html__('Create a New Custom Post Type', 'cuny-letters-cpt') . '</h1>';
                     echo '<form method="post">';
                     echo '<table class="form-table">';
-                    echo '<tr><th><label for="cpt_slug">' . esc_html__('Slug [ex.: custom-post-types]', 'cuny-letters-cpt') . '</label></th><td><input name="cpt_slug" id="cpt_slug" type="text" placeholder="custom-post-types" required></td></tr>';
+                    echo '<tr><th><label for="cpt_slug">' . esc_html__('Slug [ex.: custom-post-type]', 'cuny-letters-cpt') . '</label></th><td><input name="cpt_slug" id="cpt_slug" type="text" placeholder="custom-post-type" required></td></tr>';
                     echo '<tr><th><label for="cpt_singular">' . esc_html__('Singular Name [ex.: Custom Post Type]', 'cuny-letters-cpt') . '</label></th><td><input name="cpt_singular" id="cpt_singular" type="text" placeholder="Custom Post Type" required></td></tr>';
                     echo '<tr><th><label for="cpt_plural">' . esc_html__('Plural Name [ex.: Custom Post Types]', 'cuny-letters-cpt') . '</label></th><td><input name="cpt_plural" id="cpt_plural" type="text" placeholder="Custom Post Types" required></td></tr>';
                     echo '</table>';
