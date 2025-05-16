@@ -104,7 +104,7 @@ Available filters:
 
 ## Changelog
 
-1.0.0
+1.2.0
 
 - Initial release with all core functionality
 
