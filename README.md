@@ -2,7 +2,7 @@
 A WordPress plugin that creates a custom post type for managing letters organized by office with custom URL structure and breadcrumbs.
 
 ```
-cuny-letters-cpt/
+cuny-cpt/
 ├── cuny-letters-cpt.php           # Main plugin file
 ├── includes/
 │   ├── class-post-type.php        # Handles CPT registration
