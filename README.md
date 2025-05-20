@@ -3,7 +3,7 @@ A WordPress plugin that creates a custom post type for managing letters organize
 
 ```
 cuny-cpt/
-├── cuny-letters-cpt.php           # Main plugin file
+├── cuny-cpt.php           # Main plugin file
 ├── includes/
 │   ├── class-post-type.php        # Handles CPT registration
 │   ├── class-taxonomy.php         # Handles taxonomy registration
