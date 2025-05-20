@@ -80,7 +80,7 @@ To display a list of letters in a specific office:
 
 ## Changelog
 
-2.2.0
+2.3.0
 
 - Initial release with all core functionality
 
