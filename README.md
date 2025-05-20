@@ -39,27 +39,19 @@ cuny-cpt/
 - Extract the ZIP file to your computer
 - Upload the cuny-letters-cpt folder to your wp-content/plugins directory
 - In your WordPress admin, go to Plugins → Installed Plugins
-- Find "CUNY Letters CPT" and click "Activate"
+- Find "CUNY CPT & Office Extension" and click "Activate"
 - Go to Settings → Permalinks and click "Save Changes" to flush rewrite rules
 
 ## Usage
 
 ### Creating Offices
 
-- Navigate to Letters → Offices in your WordPress admin
+- Navigate to CPT → Offices in your WordPress admin
 - Click "Add New Office"
 - Enter the office name and optional description
 - Click "Add New Office"
 
-### Adding Letters
-
-- Navigate to Letters → Add New
-- Enter the letter title and content
-- In the "Offices" meta box, select the appropriate office(s)
-- Set any other desired post attributes (featured image, excerpt, etc.)
-- Click "Publish"
-
-### Displaying Letters
+### Displaying Post
 
 Letters will automatically appear with the following URL structure:
 `yourdomain.com/letters/office-name/letter-title`
@@ -81,22 +73,6 @@ To display a list of letters in a specific office:
 
 ## Customization
 
-### Template Overrides
-
-You can override the default templates by creating these files in your theme:
-
-1. `single-letters.php` - Single letter template
-2. `taxonomy-office.php` - Office archive template
-3. `archive-letters.php` - Main letters archive template
-
-### Hooks and Filters
-
-Available filters:
-
-- cuny_letters_post_type_args - Modify the letters post type arguments
-- cuny_letters_taxonomy_args - Modify the office taxonomy arguments
-- cuny_letters_breadcrumb_output - Modify the breadcrumb HTML
-
 ## Requirements
 
 - WordPress 5.0 or higher
@@ -104,7 +80,7 @@ Available filters:
 
 ## Changelog
 
-1.2.0
+2.2.0
 
 - Initial release with all core functionality
 
