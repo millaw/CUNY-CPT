@@ -45,12 +45,31 @@ add_action('wp_footer', function() {
         $term = get_queried_object();
         if ($term && !is_wp_error($term)) {
             $title = esc_html($term->name);
+            $cpt_label = '';
+            // Try to get the CPT from the first post in the loop (most accurate for taxonomy archives)
+            global $wp_query;
+            if (!empty($wp_query->posts) && isset($wp_query->posts[0])) {
+                $first_post = $wp_query->posts[0];
+                $post_type = get_post_type($first_post);
+                if ($post_type) {
+                    $cpt_obj = get_post_type_object($post_type);
+                    $cpt_label = $cpt_obj && isset($cpt_obj->labels->name) ? $cpt_obj->labels->name : '';
+                }
+            }
+            // Fallback: get first CPT registered to this taxonomy
+            if (!$cpt_label) {
+                $tax = get_taxonomy('office');
+                if ($tax && !empty($tax->object_type)) {
+                    $cpt_obj = get_post_type_object($tax->object_type[0]);
+                    $cpt_label = $cpt_obj && isset($cpt_obj->labels->name) ? $cpt_obj->labels->name : '';
+                }
+            }
             ?>
             <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var h1 = document.querySelector('h1.page-title');
                 if (h1 && h1.textContent.trim() === '') {
-                    h1.textContent = <?php echo json_encode($title); ?>;
+                    h1.textContent = <?php echo json_encode(trim($cpt_label ? $cpt_label . ': ' . $title : $title)); ?>;
                 }
             });
             </script>
