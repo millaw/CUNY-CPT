@@ -3,7 +3,7 @@
  * Plugin Name: CUNY CPT & Office Extension
  * Plugin URI: https://github.com/millaw/cuny-cpt
  * Description: Adds an "Office" taxonomy to custom post types. Works as an extension to CPT UI if installed, or as a standalone CPT manager.
- * Version: 2.3.0
+ * Version: 2.3.1
  * Author: Milla Wynn
  * Author URI: https://github.com/millaw
  * License: GPL-2.0+
@@ -13,7 +13,7 @@
 
 defined('ABSPATH') or die('Direct access not allowed');
 
-define('CUNY_CPT_VERSION', '2.0.0');
+define('CUNY_CPT_VERSION', '2.3.1');
 define('CUNY_CPT_PATH', plugin_dir_path(__FILE__));
 define('CUNY_CPT_URL', plugin_dir_url(__FILE__));
 
@@ -118,7 +118,7 @@ class CUNY_CPT_Office_Extension {
                 'public' => true,
                 'has_archive' => true,
                 'rewrite' => [
-                    'slug' => $slug . '/%office%',
+                    'slug' => $slug,
                     'with_front' => false
                 ],
                 'show_in_menu' => true,
@@ -222,6 +222,10 @@ add_action('init', function() {
                 'has_archive' => true,
                 'show_in_menu' => true,
                 'supports' => ['title', 'editor', 'thumbnail'],
+                'rewrite' => [
+                    'slug' => $slug,
+                    'with_front' => false
+                ],
             ]);
         }
     }
